@@ -30,3 +30,21 @@ Um protótipo implementado para tornar as cidades mais inteligentes com a IoT é
     <p>O primeiro cliente, o usuário, tem acesso a informações sobre o seu consumo e utiliza ferramentas de testes de API, como o Insomnia ou Postman, para se comunicar com o servidor. Essas ferramentas permitem realizar testes automatizados das funcionalidades da API, como verificação de requisições, respostas e tempos de resposta, sem a necessidade de implementação completa do sistema.</p>
     <p>Já o segundo cliente, o medidor, é criado em Java e é responsável por enviar atualizações de consumo em kWh para o servidor. Para isso, ele utiliza a classe Socket para estabelecer uma conexão direta com o servidor, fornecendo o endereço IP e a porta para a comunicação. Com essa técnica, é possível enviar dados em tempo real, evitando atrasos e perda de informações.</p>
 </div>
+
+
+<div>
+    <h1>Requesições HTTP</h1>
+    <p>HTTP (Hypertext Transfer Protocol) é um protocolo de comunicação utilizado para transferir dados pela internet. Ele permite que os clientes, como navegadores web ou aplicativos móveis, possam fazer requisições de recursos em servidores web e receber as respostas correspondentes. No nosso projeto, esse protocolo foi usado entre os nossos clientes e o servidor afim de padronizar todas as requesições podendo criar um servidor mais simplese poder fazer testes via ferramentas de testes de API. A seguir cada requesição existente e a sua funcionalidade:</p>
+    <ol>
+        <li>POST /conect</li>
+        <p>Esta requesição e utilizada apenas pelo medidor onde ele envia via json quem é o seu proprietario e quando ele foi criado. Caso tudo ocorra bem ele recebe um json como resposta contendo qual o ip dele no servidor para ele se indentificar.</p>
+        <li>POST /newMensure</li>
+        <p>Esta requesição e utilizada apenas pelo medidor para enviar uma nova atualização de seu consumo em khw juntamente com a data dessa medição</p>
+        <li>POST /consumption</li>
+        <p>Esta requesição e utilizada apenas pelo usuario para pedir o consumo de seus medidores recebendo o seu id, consumo atual e se esse medidor tem algum alerta de consumo excessivo.</p>
+        <li>POST /myPowerMeters</li>
+        <p>Esta requesição e utilizada apenas pelo usuario para pedir os ids dos seus medidores</p>
+        <li>POST /historic</li>
+        <p>Esta requesição e utilizada apenas pelo usuario para resgatar o historico das ultiamas 20 atualizações de um de seus medidores</p>
+    </ol>
+</div>
