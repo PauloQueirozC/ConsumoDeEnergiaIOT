@@ -10,6 +10,8 @@ Um protótipo implementado para tornar as cidades mais inteligentes com a IoT é
             <li><a href="#SocketNoServidor">Socket no Servidor</a></li> 
             <li><a href="#SocketNoCliente">Socket no Cliente</a></li> 
         </ol>
+        <li><a href="#HTTP">Requesições HTTP</a></li>
+        <li><a href="#Conclusao">Conclusão</a></li>
     </ol>
     
 <div id="Socket">
@@ -32,7 +34,7 @@ Um protótipo implementado para tornar as cidades mais inteligentes com a IoT é
 </div>
 
 
-<div>
+<div id="HTTP">
     <h1>Requesições HTTP</h1>
     <p>HTTP (Hypertext Transfer Protocol) é um protocolo de comunicação utilizado para transferir dados pela internet. Ele permite que os clientes, como navegadores web ou aplicativos móveis, possam fazer requisições de recursos em servidores web e receber as respostas correspondentes. No nosso projeto, esse protocolo foi usado entre os nossos clientes e o servidor afim de padronizar todas as requesições podendo criar um servidor mais simplese poder fazer testes via ferramentas de testes de API. A seguir cada requesição existente e a sua funcionalidade:</p>
     <ol>
@@ -47,4 +49,9 @@ Um protótipo implementado para tornar as cidades mais inteligentes com a IoT é
         <li>POST /historic</li>
         <p>Esta requesição e utilizada apenas pelo usuario para resgatar o historico das ultiamas 20 atualizações de um de seus medidores</p>
     </ol>
+</div>
+
+<div id="Conclusao">
+    <h1>Conclusão</h1>
+    
 </div>
