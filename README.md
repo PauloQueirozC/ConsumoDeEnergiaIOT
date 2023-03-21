@@ -48,10 +48,14 @@ Um protótipo implementado para tornar as cidades mais inteligentes com a IoT é
         <p>Esta requesição e utilizada apenas pelo usuario para pedir os ids dos seus medidores</p>
         <li>POST /historic</li>
         <p>Esta requesição e utilizada apenas pelo usuario para resgatar o historico das ultiamas 20 atualizações de um de seus medidores</p>
+        <li>POST /electricityBill</li>
+        <p>Esta requesição e utilizada apenas pelo usuario para gerar a fatura do mes atual calculando o seu gasto do mes pegando o valor atual do medidor e subitraindo o valor da ultima medição do mes passado</p>
     </ol>
 </div>
 
 <div id="Conclusao">
     <h1>Conclusão</h1>
-    
+    <p>O protótipo cumpre todas as funcionalidades propostas tanto pela parte dos medidores, que enviam constantemente suas medidas e podem ser visualizadas diretamente pelo terminal, quanto pela parte do usuário, que pode solicitar qualquer informação dos seus respectivos medidores, incluindo a fatura do mês. Além disso, suporta uma quantidade limitada de solicitações de clientes para o servidor, uma vez que se trata apenas de um protótipo e não está direcionado para uma grande quantidade de clientes. No entanto, é capaz de suportar uma quantidade razoável para simulação, oque e o seu proposito.</p>
+    <p>Apesar de atender a todos os requisitos, o protótipo ainda possui algumas limitações e ações pouco eficientes. Por exemplo, a parte do usuário é feita apenas para testes em ferramentas de API, portanto, não apresenta um terminal ou interface interativa, embora todas as solicitações sejam atendidas. Além disso, a eficiência é afetada pelos medidores que, alem de usarem protocolos http para mandar seus dados fazendo o mesmo ser mais demorado do que o nescessario, mesmo que em troca de um servidor mais simples; ficam sempre criando e destruindo o socket criado com o servidor a cada requesição.</p>
+    <p>Concluindo, o prototipo segue bem o seu proposito de prototipar o sistema, pois aplica de forma simples o que deve ser o sistema como um todo mostrando posntos a serem fixado e pontos a serem melhorados afim de atingir um sistema final de monitoramento de consumo energetico nas cidades.</p>
 </div>
