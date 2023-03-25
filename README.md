@@ -53,6 +53,25 @@ Um protótipo implementado para tornar as cidades mais inteligentes com a IoT é
     </ol>
 </div>
 
+<div id="Execução">
+    <h1>Execução</h1>
+    O Sistema foi feito com 2 processos diferentes que se comunicão via socket com requesições http. Assim segue o passo a passo para executar cada um dos processos.
+    <h2>Servidor</h2>
+    O primeiro a ser executado e o medidor. Ao executar ele criara um Server Socket na porta 54322 e ja aguardará os clientes. Para executalo e so digitar o seguinti comando no diretorio raiz desse repositorio   
+
+            cd ServidorCEI\target
+            
+            java -jar ConsumuDeEnergiaInteligente-1.0-SNAPSHOT.jar
+    
+<h2>Medidor</h2>
+Apos o servidor ser iniciado os medidores poderam se conectar. Ao criar um novo medidor ele pedirá o ip do servidor, a porta e o proprietario desse medidor. Para executalo e so digitar o seguinti comando no diretorio raiz desse repositorio
+    
+        cd MedidorEnergiaCEI\target
+    
+        java -jar MedidorEnergiaCEI-1.0-SNAPSHOT.jar
+    
+    
+</div>
 <div id="Conclusao">
     <h1>Conclusão</h1>
     <p>O protótipo cumpre todas as funcionalidades propostas tanto pela parte dos medidores, que enviam constantemente suas medidas e podem ser visualizadas diretamente pelo terminal, quanto pela parte do usuário, que pode solicitar qualquer informação dos seus respectivos medidores, incluindo a fatura do mês. Além disso, suporta uma quantidade limitada de solicitações de clientes para o servidor, uma vez que se trata apenas de um protótipo e não está direcionado para uma grande quantidade de clientes. No entanto, é capaz de suportar uma quantidade razoável para simulação, oque e o seu proposito.</p>
